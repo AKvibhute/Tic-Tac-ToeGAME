@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            max-width: 400px;
+            margin: 100px;
+            padding: 64px;
+            border: 1px solid #EDE0C8;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #e0c695;
+        }
+        .form-group {
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #161516; 
+        }
+        .form-group input[type="radio"] {
+            margin-right: 10px;
+        }
+        .form-group .radio-group {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .submit-btn {
+            padding: 10px 15px;
+            background-color: #ec9040;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+        .submit-btn:hover {
+            background-color: #dbcbbd;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Player Information</h1>
+        <form action="index.html" method="GET" id="playerForm">
+            <!--input of the players--> 
+            <div class="form-group">
+                <label for="players">Number of Players:</label>
+                <div class="radio-group">
+                    <label><input type="radio" id="onePlayer" name="numPlayers" value="1" required> 1 Player</label>
+                    <label><input type="radio" id="twoPlayers" name="numPlayers" value="2"> 2 Players</label>
+                </div>
+            </div>
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+    <script>
+        document.getElementById('playerForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const numPlayers = document.querySelector('input[name="numPlayers"]:checked').value;
+            localStorage.setItem('numPlayers', numPlayers);
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>

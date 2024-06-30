@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIC-TAC-TOE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="title"><p>TIC-TAC-TOE</p></div>
+    <!-- which player is playing o or x -->
+    <div class="game-status" id="gameStatus">Player X's turn</div>
+    <!-- container where the cells are there -->
+    <div class="container">
+        <div class="game-board" id="gameBoard">
+            <div class="cell" data-index="0"></div>
+            <div class="cell" data-index="1"></div>
+            <div class="cell" data-index="2"></div>
+            <div class="cell" data-index="3"></div>
+            <div class="cell" data-index="4"></div>
+            <div class="cell" data-index="5"></div>
+            <div class="cell" data-index="6"></div>
+            <div class="cell" data-index="7"></div>
+            <div class="cell" data-index="8"></div>
+        </div>
+        <!-- reset and new game bottons -->
+        <button id="resetButton">Reset Game</button>
+        <a href="player.html" id="newGameButton" class="newGameButton" >New Game</a>
+
+
+    </div>
+    <!-- Include canvas-confetti library -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+    <!-- Javascript file -->
+    <script src="tictactoe.js"></script>
+</body>
+</html>
