@@ -20,3 +20,6 @@ Win: If a player succeeds in placing three of their marks in a horizontal, verti
 Tie: If all squares are filled and no player has achieved three marks in a row, the game ends in a tie. The interface will notify the players of the tie.
 The game end screen with the announcement and confetti blast looks like this:
 ![image](https://github.com/AKvibhute/Tic-Tac-ToeGAME/assets/150135900/85f32c81-c459-47bb-b07b-56abec785bea)
+and if we click on the rest game it will get reset
+![image](https://github.com/AKvibhute/Tic-Tac-ToeGAME/assets/150135900/27b5295a-4a6d-4764-97ff-22a5c3419db0)
+and if we click on the new game we will be taken back to the player info page
